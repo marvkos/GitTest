@@ -5,22 +5,22 @@ import java.util.List;
 
 public class Library {
 
-    private List<Book> books;
+    private List<Item> items;
 
     public Library() {
-        this.books = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
-    public boolean lend(Book book) {
-        if (book.isAvailable()) {
-            book.setAvailable(false);
+    public boolean lend(Rentable rentable) {
+        if (rentable.isAvailable()) {
+            rentable.setAvailable(false);
             return true;
         }
 
         return false;
     }
 
-    public List<Book> getBooks() {
-        return books;
+    public List<Item> getItems() {
+        return items;
     }
 }
