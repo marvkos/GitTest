@@ -8,15 +8,22 @@ public class Main {
     public static void main(String[] args) {
         Library library = new Library();
 
-        Book book = new Book("The Hobbit");
+        Book theHobbit = new Book("The Hobbit");
+        Book mobyDick = new Book("Moby Dick");
 
-        if (library.lend(book)) {
+        if (library.lend(theHobbit)) {
             System.out.println("Success");
         } else {
             System.out.println("Not available");
         }
 
-        if (library.lend(book)) {
+        if (library.lend(theHobbit)) {
+            System.out.println("Success");
+        } else {
+            System.out.println("Not available");
+        }
+
+        if (library.lend(mobyDick)) {
             System.out.println("Success");
         } else {
             System.out.println("Not available");
